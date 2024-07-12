@@ -2,8 +2,8 @@ import React from 'react'
 import jobs from '../../src/jobs.json'
 import JobListing from './JobListing';
 
-const JobListings = () => {
-    const  recentJobs = jobs.slice(0, 3);
+const JobListings = ({isHome=true}) => {
+    const  recentJobs = isHome ? jobs.slice(0, 3) : jobs;
     
   return (
     <section className="bg-blue-50 px-4 py-10">

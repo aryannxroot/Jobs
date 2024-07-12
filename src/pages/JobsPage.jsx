@@ -6,7 +6,7 @@ const JobsPage = () => {
   return (
     <>
     <SearchJobs />
-    <JobListings />
+    <JobListings isHome={false}/>
     </>
   )
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { FaLocationDot } from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
 
 const JobListing = ({job}) => {
 
@@ -34,12 +35,12 @@ const JobListing = ({job}) => {
           <FaLocationDot className='text-base inline mr-1' />
           {job.location}
         </div>
-        <a
-          href="job.html"
+        <Link
+          to={`/job/${job.id}`}
           className="h-[36px] bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-lg text-center text-sm"
         >
         Read More
-        </a>
+        </Link>
       </div>
     </div>
   </div>
