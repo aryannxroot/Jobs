@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage'
 import JobsPage from './pages/JobsPage'
 import Error404Page from './pages/Error404Page'
 import AddJobPage from './pages/AddJobPage'
+import JobPage from './pages/JobPage'
 
 
 
@@ -19,6 +20,7 @@ const App = () => {
             <Route index element={<HomePage />} />
             <Route path='/jobs' element={<JobsPage />} />
             <Route path='add-job' element={<AddJobPage />} />
+            <Route path='/jobs/:id' element={<JobPage />} />
           </Route>
           <Route path="*" element={<Error404Page />} />
         </Routes>
