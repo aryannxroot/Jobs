@@ -4,6 +4,7 @@ import { FaLocationDot } from 'react-icons/fa6'
 const JobListing = ({job}) => {
 
   const [showFullDescription,setShowFullDescription] = useState(false);
+  
   let description = showFullDescription ? job.description : job.description.substring(0,100) + '...';
 
   return (
