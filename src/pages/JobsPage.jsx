@@ -2,7 +2,7 @@ import React from 'react'
 import JobListings from '../components/JobListings'
 import SearchJobs from '../components/SearchJobs'
 
-const Jobs = () => {
+const JobsPage = () => {
   return (
     <>
     <SearchJobs />
@@ -11,4 +11,4 @@ const Jobs = () => {
   )
 }
 
-export default Jobs
+export default JobsPage

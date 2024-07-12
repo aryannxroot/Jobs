@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 // Layouts
 import MainLayout from './pages/MainLayout'
 import HomePage from './pages/HomePage'
-import Jobs from './pages/Jobs'
+import JobsPage from './pages/JobsPage'
 
 
 
@@ -15,7 +15,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<MainLayout />}>
             <Route index element={<HomePage />} />
-            <Route path='/jobs' element={<Jobs />} />
+            <Route path='/jobs' element={<JobsPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
