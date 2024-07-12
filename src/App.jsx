@@ -1,21 +1,22 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-//components
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import HomeCards from './components/HomeCards'
-import JobListings from './components/JobListings'
-import ViewAllJobs from './components/ViewAllJobs'
+// Layouts
+import MainLayout from './pages/MainLayout'
+import HomePage from './pages/HomePage'
+
+
 
 const App = () => {
   return (
     <>
-      <Navbar />
-      <Hero title="Become a React Developer" />
-      <HomeCards />
-      <JobListings />
-      <ViewAllJobs />
-      
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<MainLayout />}>
+            <Route index element={<HomePage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };
