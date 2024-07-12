@@ -4,6 +4,7 @@ import { FaLocationDot } from 'react-icons/fa6'
 const JobListing = ({job}) => {
 
   const [showFullDescription,setShowFullDescription] = useState(false);
+  let description = showFullDescription ? job.description : job.description.substring(0,100) + '...';
 
   return (
   <div className="bg-white rounded-xl shadow-md relative">
@@ -14,11 +15,14 @@ const JobListing = ({job}) => {
       </div>
 
       <div className="mb-2">
-      {showFullDescription ? job.description : job.description.slice(0,90) + '...'}
+      {description}
       </div>
-      <p className='mb-2 text-blue-500 cursor-pointer hover:text-gray-600 ' onClick={() => setShowFullDescription(!showFullDescription)}>
-        View {showFullDescription ? 'Less' : 'More'}
-      </p>
+      <button 
+        onClick={() => setShowFullDescription(!showFullDescription)} 
+        className='mb-2 text-blue-500 cursor-pointer hover:text-gray-600 text-lg'>
+
+          View {showFullDescription ? 'Less' : 'More'}
+      </button>
 
       <h3 className="text-indigo-500 mb-2">{job.salary} / Year</h3>
 
