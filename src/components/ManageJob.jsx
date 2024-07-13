@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-
+import { toast } from 'react-toastify'
 import JobContext from '../context/JobContext'
 
 const ManageJob = ({deleteJob}) => {
@@ -12,6 +12,7 @@ const ManageJob = ({deleteJob}) => {
     const confirm = window.confirm("Are you sure you want to delete this job?");
     if(!confirm) return;
     deleteJob(jobId);
+    toast.success('Job deleted Successfully');
     return navigate('/jobs');
   }
 
