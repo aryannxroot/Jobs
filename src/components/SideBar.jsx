@@ -2,11 +2,11 @@ import React from 'react'
 import CompanyInfo from './CompanyInfo'
 import ManageJob from '../components/ManageJob'
 
-const SideBar = () => {
+const SideBar = ({deleteJob}) => {
   return (
     <aside>
         <CompanyInfo />
-        <ManageJob />
+        <ManageJob deleteJob={deleteJob} />
     </aside>
   )
 }
