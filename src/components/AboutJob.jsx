@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import JobContext from '../context/JobContext'
+import { FaLocationDot } from 'react-icons/fa6';
 
 const AboutJob = () => {
 
@@ -15,7 +16,7 @@ const AboutJob = () => {
             </h1>
             <div
             className="text-gray-500 mb-4 flex align-middle justify-center md:justify-start">
-            <i className="fa-solid fa-location-dot text-lg text-orange-700 mr-2"></i>
+            < FaLocationDot className='text-lg text-orange-700 mr-2' />
             <p className="text-orange-700">{job.location}</p>
             </div>
         </div>

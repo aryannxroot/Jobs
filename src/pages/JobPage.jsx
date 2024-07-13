@@ -21,7 +21,7 @@ const JobPage = () => {
         const res = await fetch(`/api/jobs/${id}`);
         const data = await res.json();
         setJob(data);
-        console.log(data);
+        // console.log(data);
       } catch (error) {
         console.log('Error fetching data :', error);
       } finally {
@@ -40,7 +40,7 @@ const JobPage = () => {
         <section className="bg-indigo-50">
           <div className="container m-auto py-10 px-6">
             <div className="grid grid-cols-1 md:grid-cols-70/30 w-full gap-6">
-            <AboutJob job={job}/>  
+            <AboutJob />  
             <SideBar />
             </div>
           </div>
