@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLoaderData } from 'react-router-dom';
 import Spinner from '../components/Spinner';
 
 import GoBack from '../components/GoBack';
@@ -25,7 +25,7 @@ const JobPage = ({deleteJob}) => {
       } catch (error) {
         console.log('Error fetching data :', error);
       } finally {
-        console.log('finally fetch completed');
+        // console.log('finally fetch completed');
         setLoading(false);
       }
     }
@@ -49,4 +49,7 @@ const JobPage = ({deleteJob}) => {
     </>
   )
 }
+
+
+
 export default JobPage

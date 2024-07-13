@@ -8,6 +8,7 @@ import JobsPage from './pages/JobsPage'
 import Error404Page from './pages/Error404Page'
 import AddJobPage from './pages/AddJobPage'
 import JobPage from './pages/JobPage'
+import EditJobPage from './pages/EditJobPage'
 
 
 
@@ -38,6 +39,19 @@ const App = () => {
 
   }
   
+  //Edit job 
+
+  const editJob = async (alterJob) => {
+
+    const res = await fetch (`/api/jobs/${alterJob.id}`, {
+      method : 'PUT',
+      headers : {
+        'Content-Type' : 'application/json', 
+      },
+      body: JSON.stringify(alterJob),
+    });
+
+  }
 
   return (
     <>
@@ -48,6 +62,7 @@ const App = () => {
             <Route path='/jobs' element={<JobsPage />} />
             <Route path='add-job' element={<AddJobPage addJobSubmit={addJob} />}  />
             <Route path='/jobs/:id' element={<JobPage deleteJob={deleteJob} />} />
+            <Route path='/jobs/edit/:id' element={<EditJobPage editJob={editJob}/>} />
           </Route>
           <Route path="*" element={<Error404Page />} />
         </Routes>
